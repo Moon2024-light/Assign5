@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Pokémon Battle Game</title>
+  <link rel="stylesheet" href="style/pokeman.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="scripts/pokeman.js" defer></script>
+  <!-- Prevent favicon request -->
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header>
+    <h1>Pokémon Battle Game</h1>
+    <p>Choose your Pokémon to battle the computer! Who will win?</p>
+  </header>
+  <main>
+    <section class="game">
+      <!-- Start Game Button -->
+      <button id="start" aria-label="Start the game and play background music">Start Game</button>
+
+      <div class="choices">
+        <button class="choice" data-type="grass" aria-label="Choose Venusaur, Grass type">
+          <img src="images/grass1.jpg" alt="Image of Venusaur, Grass type Pokémon" />
+          <p>🌿 Venusaur (Grass)</p>
+        </button>
+        <button class="choice" data-type="fire" aria-label="Choose Charizard, Fire type">
+          <img src="images/fire.jpg" alt="Image of Charizard, Fire type Pokémon" />
+          <p>🔥 Charizard (Fire)</p>
+        </button>
+        <button class="choice" data-type="water" aria-label="Choose Vaporeon, Water type">
+          <img src="images/water.jpg" alt="Image of Vaporeon, Water type Pokémon" />
+          <p>💧 Vaporeon (Water)</p>
+        </button>
+      </div>
+
+      <div class="battle">
+        <div id="player-choice">
+          <h3>Your Pokémon</h3>
+          <img id="player-img" src="" alt="Your chosen Pokémon will appear here" />
+        </div>
+        <div id="computer-choice">
+          <h3>Computer's Pokémon</h3>
+          <img id="computer-img" src="" alt="Computer's Pokémon will appear here" />
+        </div>
+      </div>
+
+      <div class="result">
+        <p id="message">Choose a Pokémon to start the battle!</p>
+        <p id="score">Wins: 0 | Losses: 0</p>
+      </div>
+
+      <!-- Replay Button -->
+      <button id="replay" aria-label="Restart the game">Replay</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Pokémon Battle Game</p>
+  </footer>
+
+  <!-- Predefined Audio Elements -->
+  <audio id="venusaur-sound" src="sounds/venusaur.mp3"></audio>
+  <audio id="charizard-sound" src="sounds/charizard.mp3"></audio>
+  <audio id="vaporeon-sound" src="sounds/vaporeon.mp3"></audio>
+  <audio id="background-sound" src="sounds/background.mp3"></audio>
+</body>
+</html>
