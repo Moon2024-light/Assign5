@@ -1,228 +1,8 @@
-old 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to bottom, #f0f8ff, #add8e6);
-  color: #333;
-  padding: 20px;
-}
-
-/* Header Styling */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #ffcb05;
-  text-shadow: 2px 2px 5px #3b4cca;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #666;
-}
-
-/* Main Game Section */
-.game {
-  max-width: 900px;
-  border: 2px solid #333;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.choices {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.choice {
-  background: #e8f0fe;
-  border: 2px solid #3b4cca;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.choice:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.choice img {
-  max-width: 100px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.choice p {
-  font-size: 1rem;
-  font-weight: bold;
-}
-.battle img {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
-/* Start Game Button */
-#start {
-  padding: 15px 25px;
-  font-size: 1.2em;
-  font-weight: bold;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 20px 0;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#start:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-#start:active {
-  background-color: #004494;
-  transform: scale(0.95);
-}
-
-/* Hide Start Game Section After Clicking Start */
-.hidden {
-  display: none;
-}
-
-/* Battle Section */
-.battle {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.battle div {
-  text-align: center;
-}
-
-.battle img {
-  max-width: 150px;
-  height: auto;
-  display: block;
-  margin: 10px auto;
-}
-
-/* Result Section */
-.result {
-  text-align: center;
-  margin: 20px 0;
-}
-
-#message {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-#score {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Replay Button */
-#replay {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background: #3b4cca;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-#replay:hover {
-  background: #2c3a91;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Keyframes for smooth animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .choices {
-    flex-direction: column;
-  }
-
-  .choice {
-    margin-bottom: 10px;
-    width: 80%;
-  }
-
-  #player-img,
-  #computer-img {
-    width: 60px;
-    height: 60px;
-  }
-
-  /* Battle Section Adjustment */
-  .battle {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #start,
-  #replay {
-    padding: 15px 30px;
-  }
-}
- /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -315,11 +95,6 @@ header p {
   transform: scale(0.95);
 }
 
-/* Hide Start Game Section After Clicking Start */
-.hidden {
-  display: none;
-}
-
 /* Battle Section */
 .battle {
   display: flex;
@@ -337,7 +112,8 @@ header p {
   height: auto;
   display: block;
   margin: 10px auto;
-}
+  object-fit: contain; /* Ensures the Poké Ball image fits within the frame */
+} 
 
 /* Result Section */
 .result {
@@ -378,29 +154,6 @@ footer {
   margin-top: 30px;
   font-size: 0.9rem;
   color: #666;
-}
-
-/* Keyframes for smooth animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Responsive styles */

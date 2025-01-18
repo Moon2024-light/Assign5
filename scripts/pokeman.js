@@ -36,12 +36,18 @@ $(document).ready(function () {
     const player = pokemons[playerChoice];
     const computer = pokemons[computerChoice];
 
+     // Update images and text for player and computer Pokémon
     $("#player-img").attr("src", player.img);
     $("#computer-img").attr("src", computer.img);
+    $("#player-name").text(`${player.name} (${player.type})`);
+    $("#computer-name").text(`${computer.name} (${computer.type})`);
+
+    // Play player Pokémon's sound
 
     const playerAudio = new Audio(player.sound);
     playerAudio.play();
 
+    // Determine the result and update the score
     const result = determineWinner(playerChoice, computerChoice);
     if (result === "win") wins++;
     if (result === "lose") losses++;
@@ -51,8 +57,8 @@ $(document).ready(function () {
   });
 
   $("#replay").on("click", function () {
-    $("#player-img, #computer-img").attr("src", "");
+    $("#player-img").attr("src", defaultImage);
+    $("#computer-img").attr("src", defaultImage);
     $("#message").text("Choose a Pokémon to start the battle!");
-    $("#score").text(`Wins: ${wins} | Losses: ${losses}`);
   });
 });
