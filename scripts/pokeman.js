@@ -12,6 +12,10 @@ $(document).ready(function () {
   const backgroundMusic = $("#background-sound")[0];
   let hasPlayedBackgroundMusic = false;
 
+  // Define the default image for unselected Pokémon
+  const defaultImage = "images/pngimg.com - pokeball_PNG7.png";
+  $("#player-img, #computer-img").attr("src", defaultImage);
+
   $("#start").on("click", function () {
     if (!hasPlayedBackgroundMusic) {
       backgroundMusic.play().catch(console.error);
